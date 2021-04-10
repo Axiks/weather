@@ -15,7 +15,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Weather',
+      title: 'Погода',
       home: BlocProvider(
         create: (context) =>
             WeatherBloc(weatherRepository: weatherRepository),

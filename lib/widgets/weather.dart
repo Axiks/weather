@@ -11,7 +11,7 @@ class Weather extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.blueAccent,
       appBar: AppBar(
-        title: Text('Flutter Weather'),
+        title: Text('Погода'),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.search),
@@ -34,7 +34,7 @@ class Weather extends StatelessWidget {
         child: BlocBuilder<WeatherBloc, WeatherState>(
           builder: (context, state) {
             if (state is WeatherInitial) {
-              return Center(child: Text('Please Select a Location'));
+              return Center(child: Text('Будь ласка. Обери своє місце розташування'));
             }
             if (state is WeatherLoadInProgress) {
               return Center(child: CircularProgressIndicator());
@@ -66,7 +66,7 @@ class Weather extends StatelessWidget {
             }
             if (state is WeatherLoadFailure) {
               return Text(
-                'Something went wrong!',
+                'Щось пішло не так!',
                 style: TextStyle(color: Colors.red),
               );
             }

@@ -12,7 +12,17 @@ class WeatherRepository {
       : assert(weatherApiClient != null);
 
   Future<Weather> getWeather(String city) async {
+    print('do it!');
     final int locationId = await weatherApiClient.getLocationId(city);
-    return weatherApiClient.fetchWeather(locationId);
+    print('do it! 2');
+    try {
+      final wet = weatherApiClient.fetchWeather(locationId);
+      print("Wet success");
+      return wet;
+    }
+    catch(e){
+      print("Wet error");
+      print(e);
+    }
   }
 }

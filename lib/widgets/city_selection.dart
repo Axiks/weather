@@ -12,7 +12,7 @@ class _CitySelectionState extends State<CitySelection> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('City'),
+        title: Text('Місце розташування'),
       ),
       body: Form(
         child: Row(
@@ -23,8 +23,8 @@ class _CitySelectionState extends State<CitySelection> {
                 child: TextFormField(
                   controller: _textController,
                   decoration: InputDecoration(
-                    labelText: 'City',
-                    hintText: 'Chicago',
+                    labelText: 'Місто',
+                    hintText: 'Lviv',
                   ),
                 ),
               ),
